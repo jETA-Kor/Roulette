@@ -1,11 +1,10 @@
 // initialize
 $(document).ready(function() {
-    $('#initializer').hide();
-    $('#result').hide();
+    $('.page').hide();
     
     $('#btn_start').bind('click', function() {
         generate($('#num_join').val());
-        $('#result').show();
+        $('#pg_result').show();
     });
     
     $('#btn_next').bind('click', function() {
@@ -15,7 +14,7 @@ $(document).ready(function() {
     currentIndex = 0;
     result = null;
     
-    $('#initializer').show();
+    $('#pg_initializer').show();
 });
 
 function getRandom(number) {
@@ -52,7 +51,7 @@ function generate(numbers) {
 
 // Shows next result
 function showNext() {
-    $('#result').append(
+    $('#pg_result').append(
         currentIndex + ': ' + result[currentIndex] + '<br />'
     );
     
