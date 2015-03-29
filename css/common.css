@@ -48,3 +48,23 @@ body {
 #backside2 {
     z-index: 100;
 }
+
+#pg_cardSelector {
+    text-align: center;
+}
+
+#pg_cardSelector img {
+    width: 20%;
+    margin: 2%;
+}
+
+#pg_result img {
+    position: absolute;
+    
+    height: 400px;
+}
+
+#tmp_card {
+    position: absolute;
+    display: none;
+}

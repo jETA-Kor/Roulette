@@ -9,10 +9,8 @@ $(document).ready(function() {
         ani_shuffle();
     }); // 시작 버튼 이벤트 바인딩
     
-    $('#pg_cardSelector input').click(function() {
-        $('#pg_cardSelector').fadeOut(500, function() {
-            $('#pg_result').fadeIn(500);
-        });
+    $('#pg_cardSelector img').click(function() {
+        showResult($(this));
         
         showNext();
     }); // 결과 출력 이벤트 바인딩
@@ -25,6 +23,9 @@ $(document).ready(function() {
     
     currentIndex = 0;
     result = null;
+    
+    $_pos_card_big_left = ($(window).width() - 255) / 2;
+    $_pos_card_big_top = ($(window).height() - 400) / 2;
     
     $('#pg_initializer').show();
 });

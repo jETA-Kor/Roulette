@@ -1,7 +1,7 @@
 function ani_shuffle() {
     $('.card_backside').hide();
-    $('.card_backside').css('left', ($(window).width() - $('.card_backside').width()) / 2);
-    $('.card_backside').css('top', ($(window).height() - $('.card_backside').height()) / 2);
+    $('.card_backside').css('left', $_pos_card_big_left);
+    $('.card_backside').css('top', $_pos_card_big_top);
     $('.card_backside').show();
     
     var cnt = 0;
@@ -45,4 +45,27 @@ function ani_shuffle() {
             clearInterval(switcher);
         }
     }, 500);
+}
+
+function showResult(target) {
+    $('#tmp_card').show();
+    
+    $('#tmp_card').css('left', target.position().left);
+    $('#tmp_card').css('top', target.position().top);
+    $('#tmp_card').css('width', target.width());
+    $('#tmp_card').css('height', target.height());
+    
+    $('#tmp_card').animate({
+        'width': '255',
+        'height': '400',
+        'left': $_pos_card_big_left,
+        'top': $_pos_card_big_top
+    }, 500, 'swing');
+    
+    $('#pg_cardSelector').fadeOut(500, function() {
+        $('#pg_result').show();
+        $('#pg_result img').css('left', $_pos_card_big_left);
+        $('#pg_result img').css('top', $_pos_card_big_top);
+        $('#tmp_card').hide();
+    });
 }
