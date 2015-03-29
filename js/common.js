@@ -10,12 +10,17 @@ $(document).ready(function() {
     }); // 시작 버튼 이벤트 바인딩
     
     $('#pg_cardSelector img').click(function() {
-        showResult($(this));
-        
-        showNext();
+        if(!isSelected) {
+            isSelected = true;
+            showResult($(this));
+
+            showNext();
+        }
     }); // 결과 출력 이벤트 바인딩
     
     $('#btn_next').click(function() {
+        isSelected = false;
+        
         $('#pg_result').fadeOut(500, function() {
             $('#pg_cardSelector').fadeIn(500);
         });
@@ -23,6 +28,7 @@ $(document).ready(function() {
     
     currentIndex = 0;
     result = null;
+    isSelected = false;
     
     $_pos_card_big_left = ($(window).width() - 255) / 2;
     $_pos_card_big_top = ($(window).height() - 400) / 2;
@@ -64,12 +70,6 @@ function generate(numbers) {
 
 // Shows next result
 function showNext() {
-    $('#pg_result').append(
-        currentIndex + ': ' + result[currentIndex] + '<br />'
-    );
-    
+    $('#result_front').prop('src', 'image/card_' + result[currentIndex] + '.png');
     currentIndex++;
-    
-    if(currentIndex == result.length)
-        $('#btn_next').hide();
 }

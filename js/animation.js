@@ -64,8 +64,17 @@ function showResult(target) {
     
     $('#pg_cardSelector').fadeOut(500, function() {
         $('#pg_result').show();
+        
         $('#pg_result img').css('left', $_pos_card_big_left);
         $('#pg_result img').css('top', $_pos_card_big_top);
+        
         $('#tmp_card').hide();
+        $('#btn_next').hide();
+        $('#result_front').hide();
+        
+        $('#result_front').fadeIn(500, function() {
+            if(currentIndex < result.length)
+                $('#btn_next').show();
+        });
     });
 }

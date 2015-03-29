@@ -1,6 +1,12 @@
+html {
+    height: 100%;
+    
+    background-image: url("../image/bgi.jpg");
+    background-size: cover;
+}
+
 body {
-    background-color: #000000;
-    color: #FFFFFF;
+    color: #000000;
 }
 
 #pg_initializer {
@@ -24,12 +30,12 @@ body {
     -webkit-appearance: none;
     
     width: 400px;
-    height: 34px;
+    height: 40px;
     
-    font-size: 10pt;
+    font-size: 14pt;
     color: #FFFFFF;
     
-    background-color: #6C9EF8;
+    background-color: #13C276;
     border: 0px;
 
     margin-top: 10px;
@@ -58,10 +64,21 @@ body {
     margin: 2%;
 }
 
-#pg_result img {
+#pg_result > img {
     position: absolute;
     
     height: 400px;
+}
+
+#btn_next {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+#result_next {
+    width: 50px;
+    height: 50px;
 }
 
 #tmp_card {
