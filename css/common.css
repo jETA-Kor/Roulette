@@ -2,3 +2,49 @@ body {
     background-color: #000000;
     color: #FFFFFF;
 }
+
+#pg_initializer {
+    width: 100%;
+    text-align: center;
+}
+
+#num_join {
+    width: 400px;
+
+    background-color: transparent;
+    border: 0px;
+
+    font-size: 18pt;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+#btn_start {
+    -webkit-appearance: none;
+    
+    width: 400px;
+    height: 34px;
+    
+    font-size: 10pt;
+    color: #FFFFFF;
+    
+    background-color: #6C9EF8;
+    border: 0px;
+
+    margin-top: 10px;
+}
+
+#pg_shuffle img {
+    position: absolute;
+    
+    height: 400px;
+}
+
+#backside1 {
+    z-index: 101;
+}
+
+#backside2 {
+    z-index: 100;
+}

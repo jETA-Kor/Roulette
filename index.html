@@ -5,13 +5,18 @@
         <link rel="stylesheet" href="css/common.css" />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="js/common.js" type="text/javascript"></script>
+        <script src="js/animation.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="pg_initializer" class="page">
-            <input type="text" id="num_join" value="10" /><input type="button" value="start" id="btn_start" />
+            <input type="text" id="num_join" value="10" /><br />
+            <input type="button" value="게임을 시작하지" id="btn_start" />
         </div>
         
-        <div id="pg_shuffle" class="page"><input type="button" value="shuffled" /></div>
+        <div id="pg_shuffle" class="page">
+            <img src="image/card_backside.png" id="backside1" class="card_backside" />
+            <img src="image/card_backside.png" id="backside2" class="card_backside" />
+        </div>
         
         <div id="pg_cardSelector" class="page">
             <input type="button" value="1" id="card_1" />

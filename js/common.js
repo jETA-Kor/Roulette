@@ -6,12 +6,8 @@ $(document).ready(function() {
         generate($('#num_join').val());
         $('#pg_initializer').hide();
         $('#pg_shuffle').show();
+        ani_shuffle();
     }); // 시작 버튼 이벤트 바인딩
-    
-    $('#pg_shuffle input').click(function() {
-        $('#pg_shuffle').fadeOut(500);
-        $('#pg_cardSelector').fadeIn(500);
-    }); // 카드 선택 화면으로 이동 이벤트 바인딩
     
     $('#pg_cardSelector input').click(function() {
         $('#pg_cardSelector').fadeOut(500, function() {
